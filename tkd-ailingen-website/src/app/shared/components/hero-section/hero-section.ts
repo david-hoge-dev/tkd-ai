@@ -23,9 +23,6 @@ export class HeroSection {
    */
   onImageLoad(event: Event): void {
     const img = event.target as HTMLImageElement;
-    const picture = img.closest('.hero-image');
-    if (picture) {
-      picture.classList.add('loaded');
-    }
+    img.classList.add('loaded');
   }
 }

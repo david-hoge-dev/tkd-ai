@@ -1,19 +1,18 @@
 <section class="hero-section" role="banner" aria-label="Hero section">
-  <div class="hero-overlay" aria-hidden="true"></div>
+  <!-- Hero image (primary) -->
+  <img 
+    class="hero-image"
+    src="/assets/images/hero/banner.png" 
+    alt="TKD Ailingen - Traditionelles Taekwon-Do"
+    loading="eager"
+    fetchpriority="high"
+    (load)="onImageLoad($event)"
+    decoding="async">
+  <!-- Text fallback (hidden when image loads) -->
   <div class="hero-content">
     @if (clubInfo) {
       <h1 class="hero-title" id="hero-title">{{ clubInfo.name }}</h1>
       <p class="hero-tagline">{{ clubInfo.tagline }}</p>
     }
   </div>
-  <!-- Hero image -->
-  <picture class="hero-image" aria-hidden="true">
-    <img 
-      src="/assets/images/hero/hero_bg.JPG" 
-      alt=""
-      loading="eager"
-      fetchpriority="high"
-      (load)="onImageLoad($event)"
-      decoding="async">
-  </picture>
 </section>
