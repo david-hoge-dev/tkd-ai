@@ -28,7 +28,6 @@ export interface ContactInfo {
     city: string;
     country: string;
   };
-  phone: string;
   email: string;
 }
 

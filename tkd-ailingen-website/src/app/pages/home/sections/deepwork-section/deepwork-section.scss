@@ -1,5 +1,6 @@
 @use '../../../../../styles/variables' as vars;
 @use '../../../../../styles/mixins' as mixins;
+@use '../../../../shared/styles/shared-section-styles' as shared;
 
 .deepwork-section {
   padding: var(--spacing-8) var(--spacing-4);
@@ -164,33 +165,11 @@
 }
 
 .benefits-grid {
-  display: grid;
-  gap: var(--spacing-3);
-  margin: var(--spacing-4) 0 var(--spacing-6) 0;
-
-  @include mixins.tablet {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  @include shared.benefits-grid;
 }
 
 .benefit-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  padding: var(--spacing-3);
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-
-  mat-icon {
-    color: #7b1fa2;
-    flex-shrink: 0;
-  }
-
-  span {
-    font-size: var(--font-size-sm);
-    color: var(--text-primary);
-  }
+  @include shared.benefit-item(#7b1fa2);
 
   &.achievement {
     grid-column: 1 / -1;
@@ -202,32 +181,10 @@
 }
 
 .cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 24px;
-  min-height: 44px;
-  background-color: #7b1fa2;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 16px;
-  transition: all 0.2s ease;
+  @include shared.cta-button(#7b1fa2, #6a1b9a);
   margin-top: var(--spacing-4);
 
-  &:hover {
-    background-color: #6a1b9a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(123, 31, 162, 0.4);
-  }
-
   mat-icon {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
     color: white;
   }
 }

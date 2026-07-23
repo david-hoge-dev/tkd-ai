@@ -37,8 +37,8 @@
     "level": "Level",
     "noSessions": "Keine Trainingseinheiten verfügbar",
     "filters": {
-      "programType": "Programm",
-      "all": "Alle Programme",
+      "programType": "Kurse",
+      "all": "Alle Kurse",
       "taekwondo": "Taekwondo",
       "zumba": "Zumba",
       "deepwork": "deepWORK",
@@ -69,7 +69,7 @@
   },
   "downloads": {
     "title": "Downloads",
-    "description": "Hier finden Sie wichtige Formulare und Dokumente zum Download.",
+    "description": "Hier findest du wichtige Formulare und Dokumente zum Download.",
     "memberRegistration": "Mitgliedsantrag",
     "fileSize": "Dateigröße",
     "noDownloads": "Keine Downloads verfügbar",
@@ -77,7 +77,7 @@
   },
   "cta": {
     "title": "Bereit zum Einstieg?",
-    "description": "Vereinbaren Sie jetzt ein kostenloses Probetraining oder kontaktieren Sie uns für weitere Informationen.",
+    "description": "Vereinbare jetzt ein kostenloses Probetraining oder kontaktiere uns für weitere Informationen.",
     "free-trial": {
       "label": "Kostenloses Probetraining",
       "aria": "Jetzt kostenloses Probetraining anfragen"
@@ -89,13 +89,11 @@
   },
   "footer": {
     "address": "Adresse",
-    "phone": "Telefon",
     "email": "E-Mail",
     "followUs": "Folgen Sie uns"
   },
   "trainers": {
     "title": "Unser Trainerteam",
-    "subtitle": "Erfahrene und qualifizierte Trainer für Ihr Training",
     "loading": "Trainer werden geladen...",
     "loadError": "Fehler beim Laden der Trainer. Bitte versuchen Sie es später erneut.",
     "noTrainers": "Keine Trainer verfügbar",

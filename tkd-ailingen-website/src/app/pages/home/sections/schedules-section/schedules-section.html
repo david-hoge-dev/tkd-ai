@@ -1,9 +1,21 @@
 <section class="schedules-section" id="training-section">
   <div class="schedules-container">
     <h2 class="section-title">{{ translationService.instant('schedule.title') }}</h2>
-    <p class="section-description">
-      Unsere Trainingszeiten für alle Programme. Besuchen Sie uns zu einer kostenlosen Probestunde!
-    </p>
+    
+    <div class="gradient-box">
+      <mat-icon>mail</mat-icon>
+      <div>
+        <h3>Kostenlose Probestunde</h3>
+        <p>
+          In allen unseren Kursen sind kostenlose Probestunden möglich. 
+          Schreib uns einfach eine Mail und komm vorbei - wir freuen uns auf dich!
+        </p>
+        <a href="mailto:info@taekwondoailingen.de" class="cta-email-button">
+          <mat-icon>email</mat-icon>
+          <span>info@taekwondoailingen.de</span>
+        </a>
+      </div>
+    </div>
 
     <!-- Filter Component -->
     <app-schedule-filter (filtersChange)="onFiltersChange($event)" />

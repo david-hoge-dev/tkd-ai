@@ -29,15 +29,6 @@
       "maxParticipants": 25
     },
     {
-      "id": "tkd-wed-windel",
-      "programType": "taekwondo",
-      "dayOfWeek": "wednesday",
-      "startTime": "16:00",
-      "endTime": "17:00",
-      "levelAgeGroup": "Windelsportler",
-      "maxParticipants": 15
-    },
-    {
       "id": "tkd-wed-youth-beginners",
       "programType": "taekwondo",
       "dayOfWeek": "wednesday",
@@ -52,7 +43,7 @@
       "dayOfWeek": "wednesday",
       "startTime": "18:00",
       "endTime": "19:00",
-      "levelAgeGroup": "Jugend 11-16 Fortgeschritten",
+      "levelAgeGroup": "Jugend 11-16 Fortgeschrittene",
       "maxParticipants": 20
     },
     {
@@ -70,7 +61,7 @@
       "dayOfWeek": "thursday",
       "startTime": "17:00",
       "endTime": "18:00",
-      "levelAgeGroup": "Bambini 4-7 Fortgeschritten",
+      "levelAgeGroup": "Bambini 4-7 Fortgeschrittene",
       "maxParticipants": 15
     },
     {
@@ -106,7 +97,7 @@
       "dayOfWeek": "friday",
       "startTime": "17:00",
       "endTime": "18:00",
-      "levelAgeGroup": "Kinder 7-11 Fortgeschritten",
+      "levelAgeGroup": "Kinder 7-11 Fortgeschrittene",
       "maxParticipants": 20
     },
     {

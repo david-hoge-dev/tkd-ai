@@ -7,10 +7,6 @@
           <p>{{ contact.address.street }}</p>
           <p>{{ contact.address.postalCode }} {{ contact.address.city }}</p>
           <p>
-            <mat-icon aria-hidden="true">phone</mat-icon>
-            <a [href]="'tel:' + contact.phone" class="contact-link">{{ contact.phone }}</a>
-          </p>
-          <p>
             <mat-icon aria-hidden="true">email</mat-icon>
             <a [href]="'mailto:' + contact.email" class="contact-link">{{ contact.email }}</a>
           </p>

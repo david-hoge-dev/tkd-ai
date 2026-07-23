@@ -65,7 +65,7 @@ export class InstagramService {
     return [
       {
         id: '1',
-        caption: 'Training session with our amazing team! 🥋 #Taekwondo #MartialArts',
+        caption: 'Training session with our amazing team! #Taekwondo #MartialArts',
         media_type: 'IMAGE',
         media_url: 'assets/images/location/location_1.JPG',
         permalink: 'https://www.instagram.com/p/example1/',
@@ -73,7 +73,7 @@ export class InstagramService {
       },
       {
         id: '2',
-        caption: 'Belt examination day! Congratulations to all participants 🎉',
+        caption: 'Belt examination day! Congratulations to all participants!',
         media_type: 'IMAGE',
         media_url: 'assets/images/location/location_2.JPG',
         permalink: 'https://www.instagram.com/p/example2/',
@@ -81,7 +81,7 @@ export class InstagramService {
       },
       {
         id: '3',
-        caption: 'Intense training preparing for the championship 💪',
+        caption: 'Intense training preparing for the championship',
         media_type: 'IMAGE',
         media_url: 'assets/images/location/location_3.JPG',
         permalink: 'https://www.instagram.com/p/example3/',
@@ -89,7 +89,7 @@ export class InstagramService {
       },
       {
         id: '4',
-        caption: 'Our dojo - where champions are made! 🏆',
+        caption: 'Our dojo - where champions are made!',
         media_type: 'IMAGE',
         media_url: 'assets/images/location/location_4.JPG',
         permalink: 'https://www.instagram.com/p/example4/',
@@ -97,7 +97,7 @@ export class InstagramService {
       },
       {
         id: '5',
-        caption: 'Kids class showing great technique! 👏',
+        caption: 'Kids class showing great technique!',
         media_type: 'IMAGE',
         media_url: 'assets/images/location/location_5.JPG',
         permalink: 'https://www.instagram.com/p/example5/',
@@ -105,7 +105,7 @@ export class InstagramService {
       },
       {
         id: '6',
-        caption: 'Team spirit! 🥋❤️ #TaekwondoFamily',
+        caption: 'Team spirit! #TaekwondoFamily',
         media_type: 'IMAGE',
         media_url: 'assets/images/location/location_6.JPG',
         permalink: 'https://www.instagram.com/p/example6/',
