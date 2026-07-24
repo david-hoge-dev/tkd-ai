@@ -26,6 +26,7 @@
     font-size: 48px;
     width: 48px;
     height: 48px;
+    min-width: 48px;
     color: #d32f2f;
   }
   
@@ -171,5 +172,26 @@
 .inline-icon {
   &.accent-red {
     @include shared.inline-icon(#d32f2f, #ef5350);
+  }
+}
+
+.photo-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin-bottom: var(--spacing-6);
+
+  .photo-link {
+    display: flex;
+    width: 100%;
+    border: 1px solid #d32f2f;
+    border-radius: var(--spacing-1);
+    padding: var(--spacing-1);
+    align-items: center;
+
+    .photo-content {
+      flex-grow: 1;
+      padding-left: var(--spacing-1);
+    }
   }
 }
