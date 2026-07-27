@@ -175,6 +175,25 @@
   }
 }
 
+.bodensee-cup-announcement {
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-6) auto;
+
+  .announcement-content > * {
+    max-width: 900px;
+    margin: 0 auto;
+
+    &.announcement-header {
+      max-width: 1200px;
+      margin-bottom: var(--spacing-6);
+    }
+
+    &.event-description {
+      margin-bottom: var(--spacing-2);
+    }
+  }
+}
+
 .photo-links {
   display: flex;
   flex-direction: column;
@@ -188,6 +207,7 @@
     border-radius: var(--spacing-1);
     padding: var(--spacing-1);
     align-items: center;
+    max-width: 400px;
 
     .photo-content {
       flex-grow: 1;
