@@ -17,9 +17,9 @@ export const DEFAULT_FILTERS: ScheduleFilters = {
   searchText: '',
 };
 
-export const PROGRAM_TYPE_OPTIONS: Array<{ value: FilterProgramType; labelKey: string }> = [
-  { value: 'all', labelKey: 'schedule.filters.all' },
-  { value: 'taekwondo', labelKey: 'schedule.filters.taekwondo' },
-  { value: 'zumba', labelKey: 'schedule.filters.zumba' },
-  { value: 'deepwork', labelKey: 'schedule.filters.deepwork' },
+export const PROGRAM_TYPE_OPTIONS: Array<{ value: FilterProgramType; label: string }> = [
+  { value: 'all', label: 'Alle Kurse' },
+  { value: 'taekwondo', label: 'Taekwondo' },
+  { value: 'zumba', label: 'Zumba®' },
+  { value: 'deepwork', label: 'deepWORK®' },
 ];

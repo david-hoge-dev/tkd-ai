@@ -1,19 +1,19 @@
 <section class="trainers-section" id="trainers">
   <div class="section-header">
     <mat-icon class="section-icon">people</mat-icon>
-    <h2 class="section-title" (click)="scrollToTop()" (keydown.enter)="scrollToTop()" (keydown.space)="scrollToTop(); $event.preventDefault()" role="button" tabindex="0">{{ translationService.instant('trainers.title') }}</h2>
+    <h2 class="section-title" (click)="scrollToTop()" (keydown.enter)="scrollToTop()" (keydown.space)="scrollToTop(); $event.preventDefault()" role="button" tabindex="0">Unser Trainerteam</h2>
   </div>
 
   <!-- Search Filter -->
   <div class="search-container">
     <mat-form-field appearance="outline" class="search-field">
-      <mat-label>{{ translationService.instant('trainers.search.placeholder') }}</mat-label>
+      <mat-label>Trainer suchen</mat-label>
       <input 
         matInput 
         type="text"
         [value]="searchQuery()"
         (input)="onSearchChange($any($event.target).value)"
-        [placeholder]="translationService.instant('trainers.search.hint')"
+        placeholder="Name, Programm, Training, Rolle..."
       />
       <mat-icon matPrefix>search</mat-icon>
       @if (searchQuery()) {
@@ -21,14 +21,14 @@
           mat-icon-button 
           matSuffix 
           (click)="clearSearch()"
-          [attr.aria-label]="translationService.instant('trainers.search.clearSearch')">
+          aria-label="Suche löschen">
           <mat-icon>close</mat-icon>
         </button>
       }
     </mat-form-field>
     @if (searchQuery()) {
       <p class="search-hint">
-        {{ translationService.instant('trainers.search.tip') }}
+        Tipp: Verwenden Sie Kommas, um nach mehreren Begriffen zu suchen (UND-Verknüpfung)
       </p>
     }
   </div>
@@ -37,7 +37,7 @@
   @if (loading()) {
     <div class="loading-container">
       <mat-spinner diameter="48"></mat-spinner>
-      <p>{{ translationService.instant('trainers.loading') }}</p>
+      <p>Trainer werden geladen...</p>
     </div>
   }
 
@@ -45,7 +45,7 @@
   @if (error()) {
     <div class="error-container">
       <mat-icon class="error-icon">error_outline</mat-icon>
-      <p class="error-message">{{ translationService.instant(error()!) }}</p>
+      <p class="error-message">{{ error() }}</p>
     </div>
   }
 
@@ -62,7 +62,7 @@
   @if (!loading() && !error() && trainers().length === 0) {
     <div class="empty-container">
       <mat-icon class="empty-icon">people_outline</mat-icon>
-      <p>{{ translationService.instant('trainers.noTrainers') }}</p>
+      <p>Keine Trainer verfügbar</p>
     </div>
   }
 </section>

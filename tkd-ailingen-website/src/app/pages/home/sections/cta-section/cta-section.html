@@ -1,7 +1,7 @@
 <section class="cta-section">
   <div class="container">
-    <h2 class="section-title">{{ translationService.instant('cta.title') }}</h2>
-    <p class="section-description">{{ translationService.instant('cta.description') }}</p>
+    <h2 class="section-title">Bereit zum Einstieg?</h2>
+    <p class="section-description">Vereinbare jetzt ein kostenloses Probetraining oder kontaktiere uns für weitere Informationen.</p>
 
     <div class="cta-buttons">
       @for (button of buttons; track button.id) {
@@ -10,11 +10,11 @@
           [color]="button.buttonStyle"
           [class]="'cta-button cta-button-' + button.buttonStyle"
           (click)="onCTAClick(button)"
-          [attr.aria-label]="translationService.instant('cta.' + button.id + '.aria')">
+          [attr.aria-label]="button.ariaLabel || button.label">
           @if (button.icon) {
             <mat-icon>{{ button.icon }}</mat-icon>
           }
-          {{ translationService.instant('cta.' + button.id + '.label') }}
+          {{ button.label }}
         </button>
       }
     </div>

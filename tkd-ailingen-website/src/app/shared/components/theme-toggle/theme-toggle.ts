@@ -2,7 +2,6 @@ import { Component, computed, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ThemeService } from '../../../core/services/theme.service';
-import { TranslationService } from '../../../core/services/translation.service';
 
 /**
  * Theme toggle button component
@@ -18,7 +17,6 @@ import { TranslationService } from '../../../core/services/translation.service';
 })
 export class ThemeToggle implements OnInit {
   private themeService = inject(ThemeService);
-  private translationService = inject(TranslationService);
 
   ngOnInit() {
     // Component initialized
@@ -44,13 +42,10 @@ export class ThemeToggle implements OnInit {
     return this.currentTheme() === 'dark' ? 'light_mode' : 'dark_mode';
   }
 
-  /**
-   * Get ARIA label for screen readers with translation
-   */
+  /** Get the German ARIA label for the theme that the button will activate. */
   getAriaLabel(): string {
-    const targetThemeKey = this.currentTheme() === 'dark' ? 'theme.light' : 'theme.dark';
-    const targetTheme = this.translationService.instant(targetThemeKey);
-    return this.translationService.instant('theme.switchTo', { theme: targetTheme });
+    const targetTheme = this.currentTheme() === 'dark' ? 'Hellmodus' : 'Dunkelmodus';
+    return `Zu ${targetTheme} wechseln`;
   }
 }
 

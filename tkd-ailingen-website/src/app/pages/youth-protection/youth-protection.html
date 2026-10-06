@@ -1,23 +1,23 @@
 <div class="youth-protection-page">
-  <button mat-fab class="back-button" (click)="goBack()" [attr.aria-label]="translationService.instant('common.back') || 'Back'">
+  <button mat-fab class="back-button" (click)="goBack()" aria-label="Zurück">
     <mat-icon>arrow_back</mat-icon>
   </button>
   
-  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" [attr.aria-label]="translationService.instant('common.scrollToTop') || 'Scroll to top'">
+  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" aria-label="Nach oben">
     <mat-icon>arrow_upward</mat-icon>
   </button>
   
   <div class="youth-protection-container">
-    <h1 class="page-title">{{ translationService.instant('youthProtection.title') }}</h1>
+    <h1 class="page-title">Jugendschutz</h1>
     
     <section class="youth-protection-section">
-      <p>{{ translationService.instant('youthProtection.intro') }}</p>
+      <p>Bei Fragen rund um den Jugendschutz steht Ihnen unsere Jugendschutzbeauftragte gerne zur Verfügung:</p>
       
       <div class="contact-block">
-        <h2>{{ translationService.instant('youthProtection.officer') }}</h2>
+        <h2>Jugendschutzbeauftragte</h2>
         <div class="info-block">
           <p><strong>Sabine Scharr</strong></p>
-          <p>{{ translationService.instant('imprint.email') }}: <a href="mailto:sabine.scharr@taekwondoailingen.de">sabine.scharr@taekwondoailingen.de</a></p>
+          <p>E-Mail: <a href="mailto:sabine.scharr@taekwondoailingen.de">sabine.scharr@taekwondoailingen.de</a></p>
         </div>
       </div>
     </section>

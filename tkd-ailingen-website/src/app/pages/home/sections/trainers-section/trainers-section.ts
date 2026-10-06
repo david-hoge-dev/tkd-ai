@@ -3,9 +3,8 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@shared/material.module';
-import { TranslationService } from '@core/services/translation.service';
 import { TrainerCard } from '@shared/components/trainer-card/trainer-card';
-import { Trainer } from '@shared/models';
+import { SpecialRole, Trainer, TRAINER_PROGRAM_LABELS, TRAINER_ROLE_LABELS, TRAINER_SPECIAL_ROLE_LABELS } from '@shared/models';
 
 const TRAINER_SEARCH_STORAGE_KEY = 'trainer-search-query';
 
@@ -42,25 +41,23 @@ export class TrainersSection implements OnInit {
         // Search in fullName
         if (trainer.fullName.toLowerCase().includes(term)) return true;
         
-        // Search in programs (translated only)
+        // Search in German program labels
         if (trainer.programs.some(program => {
-          const translated = this.translationService.instant(`trainers.programTypes.${program}`).toLowerCase();
-          return translated.includes(term);
+          return TRAINER_PROGRAM_LABELS[program].toLowerCase().includes(term);
         })) return true;
         
         // Search in sessions
         if (trainer.sessions?.some(session => session.toLowerCase().includes(term))) return true;
         
-        // Search in specialRoles (translated only)
+        // Search in German special-role labels
         if (trainer.specialRoles?.some(role => {
-          const translated = this.translationService.instant(`trainers.specialRoles.${role}`).toLowerCase();
-          return translated.includes(term);
+          return TRAINER_SPECIAL_ROLE_LABELS[role].toLowerCase().includes(term);
         })) return true;
         
-        // Search in role (translated only)
+        // Search in German role labels
         if (trainer.role) {
-          const translatedRole = this.translationService.instant(`trainers.roles.${trainer.role}`).toLowerCase();
-          if (translatedRole.includes(term)) return true;
+          const roleLabel = TRAINER_ROLE_LABELS[trainer.role] ?? trainer.role;
+          if (roleLabel.toLowerCase().includes(term)) return true;
         }
         
         return false;
@@ -70,7 +67,6 @@ export class TrainersSection implements OnInit {
 
   constructor(
     private http: HttpClient,
-    public translationService: TranslationService,
     @Inject(PLATFORM_ID) platformId: object
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
@@ -96,7 +92,7 @@ export class TrainersSection implements OnInit {
       },
       error: (err) => {
         console.error('Failed to load trainers:', err);
-        this.error.set('trainers.loadError');
+        this.error.set('Fehler beim Laden der Trainer. Bitte versuchen Sie es später erneut.');
         this.loading.set(false);
       },
     });

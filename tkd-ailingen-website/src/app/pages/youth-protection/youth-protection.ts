@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
-import { TranslationService } from '@core/services/translation.service';
 import { MaterialModule } from '@shared/material.module';
 
 /**
@@ -15,10 +14,7 @@ import { MaterialModule } from '@shared/material.module';
   standalone: true
 })
 export class YouthProtection {
-  constructor(
-    public translationService: TranslationService,
-    private location: Location
-  ) {}
+  constructor(private location: Location) {}
 
   goBack(): void {
     this.location.back();

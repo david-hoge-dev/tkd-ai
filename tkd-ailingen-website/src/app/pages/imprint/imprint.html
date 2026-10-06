@@ -1,18 +1,18 @@
 <div class="imprint-page">
-  <button mat-fab class="back-button" (click)="goBack()" [attr.aria-label]="translationService.instant('common.back') || 'Back'">
+  <button mat-fab class="back-button" (click)="goBack()" aria-label="Zurück">
     <mat-icon>arrow_back</mat-icon>
   </button>
   
-  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" [attr.aria-label]="translationService.instant('common.scrollToTop') || 'Scroll to top'">
+  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" aria-label="Nach oben">
     <mat-icon>arrow_upward</mat-icon>
   </button>
   
   <div class="imprint-container">
-    <h1 class="page-title">{{ translationService.instant('imprint.title') }}</h1>
+    <h1 class="page-title">Impressum</h1>
     
     <section class="imprint-section">
-      <h2>{{ translationService.instant('imprint.legalInfo') }}</h2>
-      <p class="legal-text">{{ translationService.instant('imprint.legalReference') }}</p>
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <p class="legal-text">Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
       
       <div class="info-block">
         <p><strong>Taekwondo Ailingen e.V.</strong></p>
@@ -22,33 +22,33 @@
     </section>
 
     <section class="imprint-section">
-      <h2>{{ translationService.instant('imprint.board') }}</h2>
+      <h2>Vorstand</h2>
       <p>Lilia Ben Amor, Giuseppe Pistillo, Sebastian Herzog</p>
     </section>
 
     <section class="imprint-section">
-      <h2>{{ translationService.instant('imprint.press') }}</h2>
+      <h2>Pressesprecherin</h2>
       <p>Lilia Ben Amor</p>
     </section>
 
     <section class="imprint-section">
-      <h2>{{ translationService.instant('imprint.contact') }}</h2>
+      <h2>Kontakt</h2>
       <p>
-        {{ translationService.instant('imprint.email') }}: 
+        E-Mail:
         <a href="mailto:info@taekwondoailingen.de">info@taekwondoailingen.de</a>
       </p>
     </section>
 
     <section class="imprint-section">
-      <h2>{{ translationService.instant('imprint.registry') }}</h2>
-      <p>{{ translationService.instant('imprint.registryEntry') }}</p>
-      <p>{{ translationService.instant('imprint.registryCourt') }}: Tettnang</p>
-      <p>{{ translationService.instant('imprint.registryNumber') }}: 836</p>
+      <h2>Registereintrag</h2>
+      <p>Eintragung im Vereinsregister</p>
+      <p>Registergericht: Tettnang</p>
+      <p>Registernummer: 836</p>
     </section>
 
     <section class="imprint-section">
-      <h2>{{ translationService.instant('imprint.responsible') }}</h2>
-      <p class="legal-text">{{ translationService.instant('imprint.responsibleReference') }}</p>
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p class="legal-text">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</p>
       <div class="info-block">
         <p><strong>Lilia Ben Amor</strong></p>
         <p>Pfannenstiel 17</p>

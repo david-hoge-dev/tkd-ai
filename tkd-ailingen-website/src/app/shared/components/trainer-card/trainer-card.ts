@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@shared/material.module';
-import { TranslationService } from '@core/services/translation.service';
-import { Trainer } from '@shared/models';
+import { Trainer, TRAINER_PROGRAM_LABELS, TRAINER_SPECIAL_ROLE_LABELS } from '@shared/models';
 
 /**
  * Trainer card component
@@ -16,8 +15,8 @@ import { Trainer } from '@shared/models';
 })
 export class TrainerCard {
   @Input() trainer!: Trainer;
-
-  constructor(public translationService: TranslationService) {}
+  readonly programLabels = TRAINER_PROGRAM_LABELS;
+  readonly specialRoleLabels = TRAINER_SPECIAL_ROLE_LABELS;
 
   /**
    * Get initials from trainer name for fallback avatar

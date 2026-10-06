@@ -2,7 +2,7 @@
   <div class="footer-content">
     @if (contact) {
       <div class="footer-section contact-section">
-        <h3 class="footer-title">{{ translationService.instant('footer.address') }}</h3>
+        <h3 class="footer-title">Adresse</h3>
         <address class="contact-info">
           <p>{{ contact.address.street }}</p>
           <p>{{ contact.address.postalCode }} {{ contact.address.city }}</p>
@@ -16,7 +16,7 @@
 
     @if (socialMedia.length > 0) {
       <div class="footer-section social-section">
-        <h3 class="footer-title">{{ translationService.instant('footer.followUs') }}</h3>
+        <h3 class="footer-title">Folgen Sie uns</h3>
         <div class="social-links">
           @for (link of socialMedia; track link.platform) {
             <a 
@@ -36,10 +36,10 @@
   <div class="footer-bottom">
     <p class="copyright">
       © {{ currentYear }} Taekwondo Ailingen e.V. | 
-      <a routerLink="/impressum" class="footer-link">{{ translationService.instant('imprint.title') }}</a> | 
-      <a routerLink="/haftungsausschluss" class="footer-link">{{ translationService.instant('disclaimer.title') }}</a> | 
-      <a routerLink="/datenschutz" class="footer-link">{{ translationService.instant('privacy.title') }}</a> | 
-      <a routerLink="/jugendschutz" class="footer-link">{{ translationService.instant('youthProtection.title') }}</a>
+      <a routerLink="/impressum" class="footer-link">Impressum</a> | 
+      <a routerLink="/haftungsausschluss" class="footer-link">Haftungsausschluss</a> | 
+      <a routerLink="/datenschutz" class="footer-link">Datenschutzerklärung</a> | 
+      <a routerLink="/jugendschutz" class="footer-link">Jugendschutz</a>
     </p>
   </div>
 </footer>

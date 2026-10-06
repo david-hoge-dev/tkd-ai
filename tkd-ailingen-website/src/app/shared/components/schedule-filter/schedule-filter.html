@@ -2,14 +2,14 @@
   <div class="filter-controls">
     <!-- Program Type Filter -->
     <mat-form-field appearance="outline" class="program-filter">
-      <mat-label>{{ translationService.instant('schedule.filters.programType') }}</mat-label>
+      <mat-label>Kurse</mat-label>
       <mat-select
         [value]="filters().programType"
         (selectionChange)="onProgramTypeChange($any($event).value)"
         [attr.data-testid]="'program-type-filter'">
         @for (option of programTypeOptions; track option.value) {
           <mat-option [value]="option.value">
-            {{ translationService.instant(option.labelKey) }}
+            {{ option.label }}
           </mat-option>
         }
       </mat-select>
@@ -17,19 +17,19 @@
 
     <!-- Search Filter -->
     <mat-form-field appearance="outline" class="search-filter">
-      <mat-label>{{ translationService.instant('schedule.filters.search') }}</mat-label>
+      <mat-label>Suche</mat-label>
       <input
         matInput
         [value]="filters().searchText"
         (input)="onSearchChange($any($event.target).value)"
-        [placeholder]="translationService.instant('schedule.filters.searchPlaceholder')"
+        placeholder="Nach Level, Tag, Uhrzeit suchen..."
         [attr.data-testid]="'search-filter'" />
       @if (filters().searchText) {
         <button
           matSuffix
           mat-icon-button
           (click)="onSearchChange('')"
-          [attr.aria-label]="translationService.instant('schedule.filters.clearSearch')">
+          aria-label="Suche löschen">
           <mat-icon>close</mat-icon>
         </button>
       }
@@ -43,7 +43,7 @@
         class="clear-filters-btn"
         [attr.data-testid]="'clear-filters-button'">
         <mat-icon>filter_alt_off</mat-icon>
-        {{ translationService.instant('schedule.filters.clearAll') }}
+        Filter zurücksetzen
       </button>
     }
   </div>

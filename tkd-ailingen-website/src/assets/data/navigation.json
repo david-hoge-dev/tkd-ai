@@ -1,29 +1,36 @@
 {
   "items": [
     {
+      "id": "news",
+      "label": "Aktuelles",
+      "routeOrAnchor": "#news-section",
+      "icon": "article",
+      "order": 1
+    },
+    {
       "id": "training",
-      "label": "nav.training",
+      "label": "Trainingszeiten",
       "routeOrAnchor": "#training-section",
       "icon": "schedule",
       "order": 1
     },
     {
       "id": "zumba",
-      "label": "Zumba",
+      "label": "Zumba®",
       "routeOrAnchor": "#zumba",
       "icon": "music_note",
       "order": 2
     },
     {
       "id": "deepwork",
-      "label": "deepWORK",
+      "label": "deepWORK®",
       "routeOrAnchor": "#deepwork",
       "icon": "fitness_center",
       "order": 3
     },
     {
       "id": "trainers",
-      "label": "nav.trainers",
+      "label": "Trainerteam",
       "routeOrAnchor": "#trainers",
       "icon": "people",
       "order": 6

@@ -1,9 +1,9 @@
 <div class="news-detail-page">
-  <button mat-fab class="back-button" (click)="goBack()" [attr.aria-label]="translationService.instant('common.back') || 'Back'">
+  <button mat-fab class="back-button" (click)="goBack()" aria-label="Zurück">
     <mat-icon>arrow_back</mat-icon>
   </button>
   
-  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" [attr.aria-label]="translationService.instant('common.scrollToTop') || 'Scroll to top'">
+  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" aria-label="Nach oben">
     <mat-icon>arrow_upward</mat-icon>
   </button>
 
@@ -11,8 +11,8 @@
   @if (error) {
     <div class="error-container">
       <mat-icon>error_outline</mat-icon>
-      <h2>{{ translationService.instant('news.notFound') }}</h2>
-      <p>{{ translationService.instant('news.notFoundMessage') }}</p>
+      <h2>Neuigkeit nicht gefunden</h2>
+      <p>Die gesuchte Neuigkeit konnte nicht gefunden werden.</p>
     </div>
   } @else if (newsItem) {
     <article class="news-article">
@@ -20,7 +20,7 @@
         <div class="article-meta">
           <div class="category-badge" [class]="'category-' + newsItem.category">
             <mat-icon>{{ getCategoryIcon(newsItem.category) }}</mat-icon>
-            <span>{{ translationService.instant('news.categories.' + newsItem.category) }}</span>
+            <span>{{ getCategoryName(newsItem.category) }}</span>
           </div>
           <time class="article-date">{{ formatDate(newsItem.date) }}</time>
         </div>
@@ -29,7 +29,7 @@
 
         @if (newsItem.author) {
           <p class="article-author">
-            {{ translationService.instant('news.by') }} {{ newsItem.author }}
+            von {{ newsItem.author }}
           </p>
         }
       </header>

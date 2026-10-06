@@ -2,7 +2,7 @@
   <div class="schedules-container">
     <div class="section-header">
       <mat-icon class="section-icon">schedule</mat-icon>
-      <h2 class="section-title">{{ translationService.instant('schedule.title') }}</h2>
+      <h2 class="section-title">Trainingszeiten</h2>
     </div>
     
     <div class="cta-box">
@@ -69,8 +69,8 @@
     @if (filteredSessions().length === 0) {
       <div class="no-results">
         <mat-icon>search_off</mat-icon>
-        <p>{{ translationService.instant('schedule.filters.noResults') }}</p>
-        <p class="no-results-hint">{{ translationService.instant('schedule.filters.noResultsHint') }}</p>
+        <p>Keine Trainingseinheiten gefunden</p>
+        <p class="no-results-hint">Versuchen Sie, Ihre Filter zu ändern oder zurückzusetzen</p>
       </div>
     }
   </div>

@@ -1,61 +1,61 @@
 <div class="privacy-page">
-  <button mat-fab class="back-button" (click)="goBack()" [attr.aria-label]="translationService.instant('common.back') || 'Back'">
+  <button mat-fab class="back-button" (click)="goBack()" aria-label="Zurück">
     <mat-icon>arrow_back</mat-icon>
   </button>
   
-  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" [attr.aria-label]="translationService.instant('common.scrollToTop') || 'Scroll to top'">
+  <button mat-fab class="scroll-top-button" (click)="scrollToTop()" aria-label="Nach oben">
     <mat-icon>arrow_upward</mat-icon>
   </button>
   
   <div class="privacy-container">
-    <h1 class="page-title">{{ translationService.instant('privacy.title') }}</h1>
+    <h1 class="page-title">Datenschutzerklärung</h1>
     
     <section class="privacy-section">
-      <p class="legal-text">{{ translationService.instant('privacy.responsible') }}</p>
+      <p class="legal-text">Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
       <div class="info-block">
         <p><strong>Taekwondo Ailingen e.V.</strong></p>
-        <p>{{ translationService.instant('privacy.representedBy') }}: Lilia Ben Amor</p>
+        <p>vertreten durch den 1. Vorstand: Lilia Ben Amor</p>
       </div>
     </section>
 
     <section class="privacy-section">
-      <h2>{{ translationService.instant('privacy.rights.title') }}</h2>
-      <p>{{ translationService.instant('privacy.rights.intro') }}</p>
+      <h2>Ihre Betroffenenrechte</h2>
+      <p>Unter den angegebenen Kontaktdaten können Sie jederzeit folgende Rechte ausüben:</p>
       <ul>
-        <li>{{ translationService.instant('privacy.rights.access') }}</li>
-        <li>{{ translationService.instant('privacy.rights.rectification') }}</li>
-        <li>{{ translationService.instant('privacy.rights.deletion') }}</li>
-        <li>{{ translationService.instant('privacy.rights.restriction') }}</li>
-        <li>{{ translationService.instant('privacy.rights.objection') }}</li>
-        <li>{{ translationService.instant('privacy.rights.portability') }}</li>
+        <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung</li>
+        <li>Berichtigung unrichtiger personenbezogener Daten</li>
+        <li>Löschung Ihrer bei uns gespeicherten Daten</li>
+        <li>Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen</li>
+        <li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns</li>
+        <li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben</li>
       </ul>
     </section>
 
     <section class="privacy-section">
-      <h2>{{ translationService.instant('privacy.purposes.title') }}</h2>
-      <p>{{ translationService.instant('privacy.purposes.content') }}</p>
+      <h2>Zwecke der Datenverarbeitung</h2>
+      <p>Wir verarbeiten Ihre personenbezogenen Daten nur zu den in dieser Datenschutzerklärung genannten Zwecken. Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als den genannten Zwecken findet nicht statt. Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn Sie Ihre ausdrückliche Einwilligung dazu erteilt haben, die Verarbeitung zur Abwicklung eines Vertrags mit Ihnen erforderlich ist, die Verarbeitung zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, oder die Verarbeitung zur Wahrung berechtigter Interessen erforderlich ist.</p>
     </section>
 
     <section class="privacy-section">
-      <h2>{{ translationService.instant('privacy.storage.title') }}</h2>
-      <p>{{ translationService.instant('privacy.storage.content') }}</p>
+      <h2>Löschung bzw. Sperrung der Daten</h2>
+      <p>Wir halten uns an die Grundsätze der Datenvermeidung und Datensparsamkeit. Wir speichern Ihre personenbezogenen Daten daher nur so lange, wie dies zur Erreichung der hier genannten Zwecke erforderlich ist oder wie es die vom Gesetzgeber vorgesehenen vielfältigen Speicherfristen vorsehen. Nach Fortfall des jeweiligen Zweckes bzw. Ablauf dieser Fristen werden die entsprechenden Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gesperrt oder gelöscht.</p>
     </section>
 
     <section class="privacy-section">
-      <h2>{{ translationService.instant('privacy.localStorage.title') }}</h2>
-      <p>{{ translationService.instant('privacy.localStorage.content') }}</p>
+      <h2>Browser-Speicher (Local Storage)</h2>
+      <p>Diese Website verwendet den Browser-Speicher (Local Storage) ausschließlich für technisch notwendige Funktionen. Folgende Daten werden lokal in Ihrem Browser gespeichert: Ihre gewählte Farbschema-Einstellung (Hell- oder Dunkelmodus), Ihre Filtereinstellungen für Trainingszeiten und Trainer-Suche. Diese Daten verbleiben ausschließlich auf Ihrem Gerät, werden nicht an uns oder Dritte übertragen und können jederzeit durch Löschen Ihrer Browser-Daten entfernt werden. Es werden keine Cookies, Analytics-Tools oder Tracking-Dienste eingesetzt.</p>
     </section>
 
     <section class="privacy-section">
-      <h2>{{ translationService.instant('privacy.contact.title') }}</h2>
-      <p>{{ translationService.instant('privacy.contact.content') }}</p>
+      <h2>Kontaktformular</h2>
+      <p>Treten Sie bzgl. Fragen jeglicher Art per E-Mail oder Kontaktformular mit uns in Kontakt, erteilen Sie uns zum Zwecke der Kontaktaufnahme Ihre freiwillige Einwilligung. Hierfür ist die Angabe einer validen E-Mail-Adresse erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional.</p>
     </section>
 
     <section class="privacy-section">
-      <h2>{{ translationService.instant('privacy.dataProtectionOfficer.title') }}</h2>
+      <h2>Fragen an den Datenschutzbeauftragten</h2>
       <div class="info-block">
         <p><strong>Lilia Ben Amor</strong></p>
-        <p>{{ translationService.instant('imprint.email') }}: <a href="mailto:info@taekwondoailingen.de">info@taekwondoailingen.de</a></p>
+        <p>E-Mail: <a href="mailto:info@taekwondoailingen.de">info@taekwondoailingen.de</a></p>
       </div>
     </section>
   </div>

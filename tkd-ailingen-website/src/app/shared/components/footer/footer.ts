@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ContactInfo, SocialMediaLink } from '@shared/models';
 import { MaterialModule } from '@shared/material.module';
-import { TranslationService } from '@core/services/translation.service';
 
 /**
  * Footer component displaying contact information and social media links
@@ -23,5 +22,4 @@ export class Footer {
   
   currentYear = new Date().getFullYear();
 
-  constructor(public translationService: TranslationService) {}
 }

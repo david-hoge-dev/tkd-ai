@@ -9,7 +9,7 @@
         />
         <img 
           [src]="trainer.photoUrl" 
-          [alt]="translationService.instant('trainers.photoAlt', { name: trainer.fullName })"
+          [alt]="'Foto von ' + trainer.fullName"
           (error)="onImageError($event)"
           loading="lazy"
           class="trainer-photo"
@@ -32,7 +32,7 @@
           class="program-chip"
           [attr.data-program]="program"
         >
-          {{ translationService.instant('trainers.programTypes.' + program) }}
+          {{ programLabels[program] }}
         </mat-chip>
       </div>
     </div>
@@ -58,7 +58,7 @@
           [attr.data-special-role]="role"
         >
           <mat-icon class="role-icon">verified</mat-icon>
-          {{ translationService.instant('trainers.specialRoles.' + role) }}
+          {{ specialRoleLabels[role] }}
         </mat-chip>
       </div>
     </div>

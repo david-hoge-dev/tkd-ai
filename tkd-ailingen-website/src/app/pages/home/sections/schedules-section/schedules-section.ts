@@ -3,7 +3,16 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@shared/material.module';
 import { ScheduleFilter } from '@app/shared/components/schedule-filter/schedule-filter';
 import { TrainingSession, ScheduleFilters, DEFAULT_FILTERS, DayOfWeek } from '@shared/models';
-import { TranslationService } from '@core/services/translation.service';
+
+const DAY_NAMES: Record<DayOfWeek, string> = {
+  monday: 'Montag',
+  tuesday: 'Dienstag',
+  wednesday: 'Mittwoch',
+  thursday: 'Donnerstag',
+  friday: 'Freitag',
+  saturday: 'Samstag',
+  sunday: 'Sonntag',
+};
 
 /**
  * Schedules section component displaying all program schedules
@@ -44,11 +53,10 @@ export class SchedulesSection {
       // Search text filter (searches level, day, and time only)
       // Supports comma-separated terms (e.g., "donn, bam" for Donnerstag + Bambini)
       if (currentFilters.searchText) {
-        const translatedDay = this.translationService.instant(`schedule.days.${session.dayOfWeek}`);
         const searchableText = [
           session.levelAgeGroup,
           session.dayOfWeek, // English key (e.g., "friday")
-          translatedDay, // Translated day (e.g., "Freitag")
+          DAY_NAMES[session.dayOfWeek],
           session.startTime,
           session.endTime,
         ]
@@ -75,8 +83,6 @@ export class SchedulesSection {
     });
   });
 
-  constructor(public translationService: TranslationService) {}
-
   onFiltersChange(newFilters: ScheduleFilters): void {
     this.filters.set(newFilters);
   }
@@ -89,14 +95,14 @@ export class SchedulesSection {
   }
   
   getDayName(day: DayOfWeek): string {
-    return this.translationService.instant(`schedule.days.${day}`);
+    return DAY_NAMES[day];
   }
   
   getProgramDisplayName(programType: string): string {
     const programMap: Record<string, string> = {
       'taekwondo': 'Taekwondo',
-      'zumba': 'Zumba',
-      'deepwork': 'deepWORK'
+      'zumba': 'Zumba®',
+      'deepwork': 'deepWORK®'
     };
     return programMap[programType] || programType;
   }

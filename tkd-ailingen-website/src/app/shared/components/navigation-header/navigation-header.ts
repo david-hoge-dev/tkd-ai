@@ -2,10 +2,8 @@ import { Component, Input, Output, EventEmitter, ViewChild, OnInit, OnDestroy, P
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { MaterialModule } from '@shared/material.module';
 import { NavigationItem } from '@shared/models';
-import { TranslationService } from '@core/services/translation.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { ThemeToggle } from '../theme-toggle/theme-toggle';
-import { LanguageToggle } from '../language-toggle/language-toggle';
 
 /**
  * Navigation header component with responsive menu
@@ -16,7 +14,7 @@ import { LanguageToggle } from '../language-toggle/language-toggle';
  */
 @Component({
   selector: 'app-navigation-header',
-  imports: [CommonModule, MaterialModule, ThemeToggle, LanguageToggle],
+  imports: [CommonModule, MaterialModule, ThemeToggle],
   templateUrl: './navigation-header.html',
   styleUrl: './navigation-header.scss',
 })
@@ -30,10 +28,7 @@ export class NavigationHeader implements OnInit, OnDestroy {
   isMobile = false;
   private isBrowser: boolean;
 
-  constructor(
-    public translationService: TranslationService,
-    @Inject(PLATFORM_ID) platformId: object
-  ) {
+  constructor(@Inject(PLATFORM_ID) platformId: object) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 

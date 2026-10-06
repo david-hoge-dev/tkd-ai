@@ -4,7 +4,6 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import { MaterialModule } from '@shared/material.module';
-import { TranslationService } from '@core/services/translation.service';
 import { NewsService } from '@core/services/news.service';
 import { NewsItem } from '@shared/models/news.model';
 
@@ -27,8 +26,7 @@ export class NewsDetail implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private newsService: NewsService,
-    private sanitizer: DomSanitizer,
-    public translationService: TranslationService
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -84,10 +82,20 @@ export class NewsDetail implements OnInit, OnDestroy {
     }
   }
 
+  getCategoryName(category?: string): string {
+    const categoryNames: Record<string, string> = {
+      event: 'Veranstaltung',
+      announcement: 'Ankündigung',
+      achievement: 'Erfolg',
+      general: 'Allgemein',
+    };
+    return categoryNames[category ?? 'general'] ?? categoryNames['general'];
+  }
+
   formatDate(dateString: string): string {
     const date = new Date(dateString);
     return date.toLocaleDateString(
-      this.translationService.getCurrentLanguage(),
+      'de-DE',
       { year: 'numeric', month: 'long', day: 'numeric' }
     );
   }

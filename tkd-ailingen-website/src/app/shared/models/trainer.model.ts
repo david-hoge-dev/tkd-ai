@@ -12,7 +12,45 @@ export type TrainerProgram = 'taekwondo' | 'zumba' | 'deepwork';
 /**
  * Special roles or certifications a trainer may have
  */
-export type SpecialRole = 'youth-protection-officer' | 'first-aid-certified' | 'competition-judge';
+export type SpecialRole =
+  | 'youth-protection-officer'
+  | 'first-aid-certified'
+  | 'competition-judge'
+  | 'treasurer'
+  | 'board-member'
+  | 'vice-board-member'
+  | 'trainer-c'
+  | 'trainer-b'
+  | 'auditor'
+  | 'assistant-instructor';
+
+export const TRAINER_PROGRAM_LABELS: Record<TrainerProgram, string> = {
+  taekwondo: 'Taekwondo',
+  zumba: 'Zumba®',
+  deepwork: 'deepWORK®',
+};
+
+export const TRAINER_ROLE_LABELS: Record<string, string> = {
+  'head-instructor': 'Cheftrainer',
+  instructor: 'Trainer',
+  assistant: 'Assistent',
+  'youth-protection-officer': 'Jugendschutzbeauftragter',
+  'Chef Trainer': 'Cheftrainer',
+  Wettkampf: 'Wettkampf',
+};
+
+export const TRAINER_SPECIAL_ROLE_LABELS: Record<SpecialRole, string> = {
+  'youth-protection-officer': 'Jugendschutzbeauftragter',
+  'first-aid-certified': 'Erste-Hilfe zertifiziert',
+  'competition-judge': 'Wettkampfrichter',
+  treasurer: 'Kassenwart',
+  'board-member': 'Vorstand',
+  'vice-board-member': '2. Vorstand',
+  'trainer-c': 'Trainer-C Lizenz',
+  'trainer-b': 'Trainer-B Lizenz',
+  auditor: 'Prüfer Lizenz',
+  'assistant-instructor': 'Assistenztrainer',
+};
 
 /**
  * Trainer profile interface

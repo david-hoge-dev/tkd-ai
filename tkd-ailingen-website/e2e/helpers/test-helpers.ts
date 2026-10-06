@@ -113,16 +113,6 @@ export async function openMobileMenu(page: Page): Promise<void> {
 }
 
 /**
- * Language/Translation helpers
- */
-export async function switchLanguage(page: Page, lang: 'de' | 'en'): Promise<void> {
-  const langButton = page.getByRole('button', { name: new RegExp(lang, 'i') });
-  await langButton.click();
-  // Wait for translations to load
-  await page.waitForTimeout(500);
-}
-
-/**
  * Performance helpers
  */
 export async function measurePageLoad(page: Page): Promise<number> {

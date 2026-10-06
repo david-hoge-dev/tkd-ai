@@ -16,6 +16,26 @@ test.describe('Homepage - User Story 1 (MVP)', () => {
     await navigateToHomePage(page);
   });
 
+  test('uses German-only UI and keeps the theme toggle accessible', async ({ page }) => {
+    await expect(page.locator('html')).toHaveAttribute('lang', 'de');
+    await expect(page.locator('app-language-toggle')).toHaveCount(0);
+
+    const themeToggle = page.getByTestId('theme-toggle-button');
+    await expect(themeToggle).toHaveAttribute(
+      'aria-label',
+      /^(Zu Hellmodus wechseln|Zu Dunkelmodus wechseln)$/
+    );
+
+    const localeAssetRequests: string[] = [];
+    page.on('request', request => {
+      if (new URL(request.url()).pathname.startsWith('/assets/i18n/')) {
+        localeAssetRequests.push(request.url());
+      }
+    });
+    await page.reload();
+    expect(localeAssetRequests).toEqual([]);
+  });
+
   /**
    * T045: Test AC1 - Club name "Taekwondo Ailingen" displayed in hero on mobile load
    */

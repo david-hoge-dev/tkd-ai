@@ -7,14 +7,13 @@
          (keydown.space)="scrollToTop($event)"
          role="button"
          tabindex="0"
-         [attr.aria-label]="translationService.instant('nav.scrollToTop')">
-      <span class="club-name">{{ translationService.instant('hero.clubName') }}</span>
+        aria-label="Zur Startseite">
+      <span class="club-name">Taekwondo Ailingen e.V.</span>
     </div>
 
     <!-- Navigation Controls - Always visible (hamburger menu approach) -->
     <div class="mobile-controls">
-      <!-- Language and Theme Toggle -->
-      <app-language-toggle class="mobile-language-toggle" />
+      <!-- Theme Toggle -->
       <app-theme-toggle class="mobile-theme-toggle" />
       
       <!-- Hamburger Menu Button -->
@@ -49,7 +48,7 @@
           @if (item.icon) {
             <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
           }
-          <span matListItemTitle>{{ translationService.instant('nav.' + item.id) }}</span>
+          <span matListItemTitle>{{ item.label }}</span>
         </a>
       }
     </mat-nav-list>

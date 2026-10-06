@@ -1,67 +1,31 @@
 <section class="news-section" id="news-section">
-  <div class="news-container">
-    <div class="section-header">
-      <mat-icon class="section-icon">article</mat-icon>
-      <h2 class="section-title">{{ translationService.instant('news.title') }}</h2>
+  <div class="bodensee-cup-announcement">
+    <div class="announcement-content">
+      <div class="section-header announcement-header">
+        <mat-icon class="section-icon">photo_camera</mat-icon>
+        <h2 class="section-title">Internationaler Bodensee Cup 2026</h2>
+      </div>
+      <p class="event-description">
+        Impressionen von unserem diesjährigen Internationalen Bodensee Cup sind jetzt online!
+        Vielen Dank an alle Fotografen für die großartigen Aufnahmen.
+      </p>
+      <div class="inline-buttons">
+        <a href="https://photos.app.goo.gl/SnSufK6AvQaSx5hz5" target="_blank" rel="noopener noreferrer" class="inline-button">
+          <mat-icon class="photo-icon">collections</mat-icon>
+          <span class="inline-button-content">Galerie 1</span>
+          <mat-icon class="open-icon">open_in_new</mat-icon>
+        </a>
+        <a href="https://photos.app.goo.gl/mWFCqb4GhkJm5EeU7" target="_blank" rel="noopener noreferrer" class="inline-button">
+          <mat-icon class="photo-icon">collections</mat-icon>
+          <span class="inline-button-content">Galerie 2</span>
+          <mat-icon class="open-icon">open_in_new</mat-icon>
+        </a>
+        <a href="https://nx32730.your-storageshare.de/s/d2ajjkCXq3GKdNy" target="_blank" rel="noopener noreferrer" class="inline-button">
+          <mat-icon class="photo-icon">collections</mat-icon>
+          <span class="inline-button-content">Galerie 3</span>
+          <mat-icon class="open-icon">open_in_new</mat-icon>
+        </a>
+      </div>
     </div>
-    <p class="section-description">
-      {{ translationService.instant('news.description') }}
-    </p>
-
-    @if (paginatedNews().length > 0) {
-      <div class="news-grid">
-        @for (newsItem of paginatedNews(); track newsItem.id) {
-          <mat-card class="news-card">
-            @if (newsItem.imageUrl) {
-              <img mat-card-image [src]="newsItem.imageUrl" [alt]="newsItem.title" class="news-image">
-            }
-            
-            <mat-card-header>
-              <mat-icon mat-card-avatar [class]="'category-icon category-' + newsItem.category">
-                {{ getCategoryIcon(newsItem.category) }}
-              </mat-icon>
-              <mat-card-title>{{ newsItem.title }}</mat-card-title>
-              <mat-card-subtitle>
-                <span class="news-date">{{ formatDate(newsItem.date) }}</span>
-                @if (newsItem.category) {
-                  <span class="news-category">
-                    {{ translationService.instant('news.categories.' + newsItem.category) }}
-                  </span>
-                }
-              </mat-card-subtitle>
-            </mat-card-header>
-
-            <mat-card-content>
-              <p class="news-excerpt">{{ newsItem.excerpt }}</p>
-            </mat-card-content>
-
-            <mat-card-actions>
-              <a mat-button color="primary" [routerLink]="['/news', newsItem.id]">
-                {{ translationService.instant('news.readMore') }}
-                <mat-icon>arrow_forward</mat-icon>
-              </a>
-            </mat-card-actions>
-          </mat-card>
-        }
-      </div>
-
-      <!-- Pagination -->
-      @if (totalPages() > 1) {
-        <mat-paginator
-          [length]="allNews().length"
-          [pageSize]="pageSize()"
-          [pageSizeOptions]="[6, 12, 24]"
-          [pageIndex]="currentPage()"
-          (page)="onPageChange($event)"
-          [attr.aria-label]="translationService.instant('news.pagination.label')"
-          class="news-paginator">
-        </mat-paginator>
-      }
-    } @else {
-      <div class="no-news">
-        <mat-icon>info</mat-icon>
-        <p>{{ translationService.instant('news.noNews') }}</p>
-      </div>
-    }
   </div>
 </section>

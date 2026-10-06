@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@shared/material.module';
 import { CTAButton, CallToAction } from '@shared/models';
-import { TranslationService } from '@core/services/translation.service';
 
 /**
  * Call-to-action section with primary action buttons
@@ -17,8 +16,6 @@ import { TranslationService } from '@core/services/translation.service';
 })
 export class CTASection {
   @Input() buttons: CTAButton[] = [];
-
-  constructor(public translationService: TranslationService) {}
 
   onCTAClick(button: CTAButton): void {
     if (button.actionType === 'mailto') {

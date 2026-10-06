@@ -5,7 +5,7 @@ Core functionality: ✅ COMPLETE AND WORKING
 - Dark/light theme toggle operational
 - LocalStorage persistence functional
 - No FOUC (Flash of Unstyled Content)
-- Translations integrated (German/English)
+- German accessibility labels are provided directly by the component.
 - User confirmed: "nice, now it's working"
 
 ## Unit Tests Status: ✅ **16/16 PASSING**
@@ -70,7 +70,7 @@ All functionality verified manually in browser (http://localhost:4200):
 - ✅ Light theme: White background, black text, strong red (#C81E1E) header
 - ✅ localStorage persistence: Theme survives page reload
 - ✅ No FOUC: Theme applied before Angular hydration
-- ✅ ARIA labels: Correct German/English translations
+- ✅ ARIA labels: German action labels describe the theme that will be activated
 
 ### Accessibility (Visual Verification)
 - ✅ Button has 44px touch target

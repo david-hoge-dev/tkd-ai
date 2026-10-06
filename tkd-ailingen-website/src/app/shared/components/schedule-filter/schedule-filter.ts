@@ -2,7 +2,6 @@ import { Component, Output, EventEmitter, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@shared/material.module';
-import { TranslationService } from '@core/services/translation.service';
 import { ScheduleFilters, FilterProgramType, PROGRAM_TYPE_OPTIONS, DEFAULT_FILTERS, FILTER_STORAGE_KEY } from '@shared/models';
 
 /**
@@ -20,8 +19,6 @@ export class ScheduleFilter implements OnInit {
 
   filters = signal<ScheduleFilters>({ ...DEFAULT_FILTERS });
   programTypeOptions = PROGRAM_TYPE_OPTIONS;
-
-  constructor(public translationService: TranslationService) {}
 
   ngOnInit(): void {
     this.loadFiltersFromStorage();

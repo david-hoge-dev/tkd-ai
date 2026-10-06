@@ -9,6 +9,6 @@ describe.skip('ThemeToggle', () => {
     //  Button renders correctly
     //  Icon changes (sun/moon) based on theme
     //  Click toggles theme
-    //  ARIA labels work with translations
+    //  ARIA labels are German and describe the target theme
   });
 });
