@@ -39,17 +39,17 @@
     "sortKey": "hoge-natale vanessa"
   },
   {
-    "id": "sandra-pistillo",
+    "id": "sandra-graf",
     "firstName": "Sandra",
-    "lastName": "Pistillo",
-    "fullName": "Sandra Pistillo",
+    "lastName": "Graf",
+    "fullName": "Sandra Graf",
     "role": "",
     "programs": ["taekwondo"],
     "sessions": ["Bambinis 4-7 Anfänger"],
     "specialRoles": [],
     "bio": "1. Dan Taekwondo",
-    "photoUrl": "/assets/images/trainers/sandra_pistillo.JPG",
-    "sortKey": "pistillo sandra"
+    "photoUrl": "/assets/images/trainers/sandra_graf.JPG",
+    "sortKey": "graf sandra"
   },
   {
     "id": "lilia-ben-amor",
@@ -130,17 +130,17 @@
     "sortKey": "sauerborn jürgen"
   },
   {
-    "id": "markus-tress",
-    "firstName": "Markus",
+    "id": "marcus-tress",
+    "firstName": "Marcus",
     "lastName": "Tress",
-    "fullName": "Markus Tress",
+    "fullName": "Marcus Tress",
     "role": "",
     "programs": ["taekwondo"],
     "sessions": ["Jugend ab 16 / Erwachsene"],
-    "specialRoles": ["assistant-instructor"],
+    "specialRoles": [],
     "bio": "1. Kup Taekwondo",
-    "photoUrl": "/assets/images/trainers/markus_tress.JPG",
-    "sortKey": "tress markus"
+    "photoUrl": "/assets/images/trainers/marcus_tress.JPG",
+    "sortKey": "tress marcus"
   },
   {
     "id": "claudia-tagmann",
@@ -271,5 +271,31 @@
     "bio": "",
     "photoUrl": "/assets/images/trainers/Asiris.jpg",
     "sortKey": "asiris"
+  },
+  {
+    "id": "ingrid-pistillo",
+    "firstName": "Ingrid",
+    "lastName": "Pistillo",
+    "fullName": "Ingrid Pistillo",
+    "role": "",
+    "programs": ["taekwondo"],
+    "sessions": ["Bambinis 4-7 Anfänger"],
+    "specialRoles": [],
+    "bio": "",
+    "photoUrl": "/assets/images/trainers/ingrid_pistillo.JPG",
+    "sortKey": "pistillo ingrid"
+  },
+  {
+    "id": "josephina-graf",
+    "firstName": "Josephina",
+    "lastName": "Graf",
+    "fullName": "Josephina Graf",
+    "role": "",
+    "programs": ["taekwondo"],
+    "sessions": ["Bambinis 4-7 Anfänger"],
+    "specialRoles": ["assistant-instructor"],
+    "bio": "4. Kup Taekwondo",
+    "photoUrl": "/assets/images/trainers/josephina_graf.JPG",
+    "sortKey": "graf josephina"
   }
 ]

@@ -1,3 +1,7 @@
+@use '../../../../../styles/variables' as vars;
+@use '../../../../../styles/mixins' as mixins;
+@use '../../../../shared/styles/shared-section-styles' as shared;
+
 .trainers-section {
   padding: 3rem 1rem;
   max-width: 1400px;
@@ -5,25 +9,22 @@
 }
 
 .section-header {
-  text-align: center;
+  @include shared.section-header(#d32f2f, #ef5350);
+  justify-content: center;
   margin-bottom: 2.5rem;
-}
+  
+  .section-title {
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  color: var(--text-primary);
-  cursor: pointer;
-  user-select: none;
-  transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.8;
+    }
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 

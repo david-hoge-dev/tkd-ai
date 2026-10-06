@@ -1,19 +1,23 @@
 <section class="schedules-section" id="training-section">
   <div class="schedules-container">
-    <h2 class="section-title">{{ translationService.instant('schedule.title') }}</h2>
+    <div class="section-header">
+      <mat-icon class="section-icon">schedule</mat-icon>
+      <h2 class="section-title">{{ translationService.instant('schedule.title') }}</h2>
+    </div>
     
-    <div class="gradient-box">
-      <mat-icon>mail</mat-icon>
+    <div class="cta-box">
       <div>
         <h3>Kostenlose Probestunde</h3>
         <p>
           In allen unseren Kursen sind kostenlose Probestunden möglich. 
           Schreib uns einfach eine Mail und komm vorbei - wir freuen uns auf dich!
         </p>
-        <a href="mailto:info@taekwondoailingen.de" class="cta-email-button">
-          <mat-icon>email</mat-icon>
-          <span>info@taekwondoailingen.de</span>
-        </a>
+        <div class="inline-buttons">
+          <a href="mailto:info@taekwondoailingen.de" class="inline-button">
+            <mat-icon>email</mat-icon>
+            <div class="inline-button-content">info@taekwondoailingen.de</div>
+          </a>
+        </div>
       </div>
     </div>
 

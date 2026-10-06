@@ -17,29 +17,8 @@
 }
 
 .section-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3);
-  margin-bottom: var(--spacing-6);
-  
-  .section-icon {
-    font-size: 48px;
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    color: #d32f2f;
-  }
-  
-  .section-title {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--text-primary);
-    margin: 0;
-    
-    @include mixins.tablet {
-      font-size: 42px;
-    }
-  }
+  @include shared.section-header(#d32f2f, #ef5350);
+  justify-content: center;
 }
 
 .content-wrapper {
@@ -190,28 +169,6 @@
 
     &.event-description {
       margin-bottom: var(--spacing-2);
-    }
-  }
-}
-
-.photo-links {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-1);
-  margin-bottom: var(--spacing-6);
-
-  .photo-link {
-    display: flex;
-    width: 100%;
-    border: 1px solid #d32f2f;
-    border-radius: var(--spacing-1);
-    padding: var(--spacing-1);
-    align-items: center;
-    max-width: 400px;
-
-    .photo-content {
-      flex-grow: 1;
-      padding-left: var(--spacing-1);
     }
   }
 }

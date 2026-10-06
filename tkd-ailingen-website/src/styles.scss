@@ -2,6 +2,7 @@
 @use './styles/variables' as *;
 @use './styles/mixins' as *;
 @use './styles/themes' as *;
+@use './app/shared/styles/inline-button';
 
 // Import Angular Material theme directly here with configuration
 @use '@angular/material' as mat;

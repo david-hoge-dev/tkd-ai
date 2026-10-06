@@ -29,30 +29,12 @@
       "category": "policies"
     },
     {
-      "id": "notfallfahrplan",
-      "label": "Notfallfahrplan",
-      "description": "Handlungsanweisungen für Notfallsituationen während des Trainings.",
-      "fileUrl": "/assets/downloads/Notfallfahrplan.pdf",
-      "fileType": "pdf",
-      "fileSizeKB": 482,
-      "category": "policies"
-    },
-    {
       "id": "ehrenkodex",
       "label": "Ehrenkodex",
       "description": "Verhaltenskodex und ethische Grundsätze für alle Vereinsmitglieder.",
       "fileUrl": "/assets/downloads/Ehrenkodex.pdf",
       "fileType": "pdf",
       "fileSizeKB": 606,
-      "category": "policies"
-    },
-    {
-      "id": "verhaltensregeln-trainer",
-      "label": "Verhaltensregeln für Trainer und Helfer",
-      "description": "Verbindliche Verhaltensregeln für Trainer und Helfer zur Unterschrift.",
-      "fileUrl": "/assets/downloads/Verhaltensregeln-Trainer-und-Helfer_zur-Unterschrift.pdf",
-      "fileType": "pdf",
-      "fileSizeKB": 520,
       "category": "policies"
     }
   ]

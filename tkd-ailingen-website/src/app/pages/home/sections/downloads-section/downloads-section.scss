@@ -1,3 +1,7 @@
+@use '../../../../../styles/variables' as vars;
+@use '../../../../../styles/mixins' as mixins;
+@use '../../../../shared/styles/shared-section-styles' as shared;
+
 .downloads-section {
   padding: 48px 20px;
   background-color: var(--surface-card);
@@ -8,16 +12,10 @@
     margin: 0 auto;
   }
 
-  .section-title {
-    font-size: 32px;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin: 0 0 16px 0;
-    text-align: center;
-
-    @media (min-width: 768px) {
-      font-size: 40px;
-    }
+  .section-header {
+    @include shared.section-header(#d32f2f, #ef5350);
+    justify-content: center;
+    margin-bottom: 16px;
   }
 
   .section-description {

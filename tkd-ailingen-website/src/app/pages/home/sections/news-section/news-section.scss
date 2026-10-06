@@ -1,5 +1,6 @@
 @use '../../../../../styles/variables' as vars;
 @use '../../../../../styles/mixins' as mixins;
+@use '../../../../shared/styles/shared-section-styles' as shared;
 
 .news-section {
   padding: var(--spacing-8) var(--spacing-4);
@@ -15,16 +16,10 @@
   margin: 0 auto;
 }
 
-.section-title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  text-align: center;
-  margin: 0 0 var(--spacing-3) 0;
-  color: var(--text-primary);
-
-  @include mixins.tablet {
-    font-size: var(--font-size-3xl);
-  }
+.section-header {
+  @include shared.section-header(#d32f2f, #ef5350);
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
 }
 
 .section-description {

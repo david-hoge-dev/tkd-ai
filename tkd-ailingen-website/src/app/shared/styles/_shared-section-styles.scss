@@ -6,6 +6,39 @@
  * Import this in section-specific SCSS files to use common components
  */
 
+// Section Header (Title with Icon)
+@mixin section-header($icon-color, $icon-color-dark: null) {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-6);
+  
+  .section-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    color: $icon-color;
+
+    @if $icon-color-dark {
+      .dark-theme & {
+        color: $icon-color-dark;
+      }
+    }
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+    
+    @include mixins.tablet {
+      font-size: 42px;
+    }
+  }
+}
+
 // Benefits/Features Grid Layout
 @mixin benefits-grid {
   display: grid;

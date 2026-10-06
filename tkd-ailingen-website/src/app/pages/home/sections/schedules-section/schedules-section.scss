@@ -1,5 +1,6 @@
 @use '../../../../../styles/variables' as vars;
 @use '../../../../../styles/mixins' as mixins;
+@use '../../../../shared/styles/shared-section-styles' as shared;
 
 .schedules-section {
   padding: var(--spacing-8) var(--spacing-4);
@@ -15,16 +16,9 @@
   margin: 0 auto;
 }
 
-.section-title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  text-align: center;
-  margin: 0 0 var(--spacing-3) 0;
-  color: var(--text-primary);
-
-  @include mixins.tablet {
-    font-size: var(--font-size-3xl);
-  }
+.section-header {
+  @include shared.section-header(#d32f2f, #ef5350);
+  justify-content: center;
 }
 
 .section-description {
@@ -42,87 +36,11 @@
   }
 }
 
-.gradient-box {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(123, 31, 162, 0.1) 0%, rgba(255, 111, 0, 0.05) 100%);
-  border-radius: 8px;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  box-shadow: var(--shadow-sm);
+.cta-box {
+  @include shared.highlight-box(#d32f2f, #ef5350);
 
-  > mat-icon {
-    font-size: 32px;
-    width: 32px;
-    height: 32px;
-    color: #7b1fa2;
-    flex-shrink: 0;
-    margin-top: 4px;
-
-    .dark-theme & {
-      color: #ab47bc;
-    }
-  }
-
-  > div {
-    flex: 1;
-  }
-
-  h3 {
-    margin-top: 0;
-    margin-bottom: var(--spacing-2);
-    font-size: var(--font-size-lg);
-    color: #7b1fa2;
-
-    .dark-theme & {
-      color: #ab47bc;
-    }
-  }
-
-  p {
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-relaxed);
-    color: var(--text-primary);
-    margin: 0 0 var(--spacing-3) 0;
-
-    @include mixins.tablet {
-      font-size: var(--font-size-base);
-    }
-  }
-
-  .cta-email-button {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-2);
-    padding: 12px 20px;
-    background-color: #7b1fa2;
-    color: white;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-base);
-    transition: all 0.2s ease;
-
-    &:hover {
-      background-color: #6a1b9a;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(123, 31, 162, 0.4);
-    }
-
-    mat-icon {
-      font-size: 20px;
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  .dark-theme & {
-    background: linear-gradient(135deg, rgba(123, 31, 162, 0.15) 0%, rgba(255, 111, 0, 0.08) 100%);
-  }
-
-  @media (max-width: 768px) {
-    padding: 1rem;
+  .inline-buttons {
+    margin: var(--spacing-3) 0 0 0;
   }
 }
 
@@ -178,10 +96,6 @@
   border-radius: var(--border-radius);
   transition: all 0.2s ease;
   border-left: 4px solid transparent;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
 
   // Color-coded border and shadows for different programs
   &[data-program="taekwondo"] {

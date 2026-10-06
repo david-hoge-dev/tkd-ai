@@ -1,21 +1,31 @@
 # TODO List
 
-## Images & Media
-- [ ] Minimize image size (optimize all trainer/hero images for web)
-- [ ] Get better image for Zumba section
-- [ ] Add smaller images for chips with fixed align
-- [ ] Add hero image
-- [ ] Modify hero image to also work for dark mode (overlay/filter adjustment)
+## Homepage Structure & Content
+- [ ] Add a news section as the first section after the hero.
+- [ ] Add a visually separate extra-program area for offers such as Zumba and deepWORK.
+- [ ] Add the Internationaler Bodensee Cup 2026 section and keep the gallery tabs centered.
+- [ ] Review and update trainer bios.
 
-## Features & Components
-- [ ] Add details modal for trainers on click (show full bio, qualifications, etc.)
-- [ ] Add section for IBC (International Business Club?)
-- [ ] Clarify news section (define content strategy and implementation)
+## Taekwondo Information
+- [ ] Add a map for the Halle location with parking information.
+- [ ] Add an image of the Halle to the upper Taekwondo information section.
+- [ ] Add missing trainer photos where needed.
 
-## Performance & Optimization
-- [ ] Review and optimize bundle sizes
-- [ ] Consider lazy loading for images
+## Zumba
+- [ ] Replace the Zumba image with a suitable image.
+- [ ] Check whether the registered-trademark symbol is required for Zumba and deepWORK, and apply it consistently.
 
-## Content
-- [ ] Review and update trainer bios
-- [ ] Add missing trainer photos where needed
+## deepWORK
+- [ ] Add a trainer to the deepWORK section.
+
+## Downloads
+- [ ] Make all download tiles the same height.
+
+## Navigation & Branding
+- [ ] Remove the language translation feature and its related controls/content.
+- [ ] Replace the default Angular browser-tab icon with the club favicon.
+
+## Images & Performance
+- [ ] Minimize image sizes, especially trainer and hero images.
+- [ ] Adjust the hero image overlay/filter for dark mode.
+- [ ] Review and optimize bundle sizes.

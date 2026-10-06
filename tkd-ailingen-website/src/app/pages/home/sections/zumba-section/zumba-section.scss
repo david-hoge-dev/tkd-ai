@@ -17,28 +17,8 @@
 }
 
 .section-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3);
-  margin-bottom: var(--spacing-6);
-  
-  .section-icon {
-    font-size: 48px;
-    width: 48px;
-    height: 48px;
-    color: #f57c00;
-  }
-  
-  .section-title {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--text-primary);
-    margin: 0;
-    
-    @include mixins.tablet {
-      font-size: 42px;
-    }
-  }
+  @include shared.section-header(#f57c00, #ff9800);
+  justify-content: center;
 }
 
 .content-wrapper {
