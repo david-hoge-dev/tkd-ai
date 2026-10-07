@@ -2,7 +2,7 @@
   <!-- Hero image (primary) -->
   <img 
     class="hero-image"
-    src="/assets/images/hero/banner.png" 
+    [src]="currentTheme() === 'dark' ? '/assets/images/hero/banner_dark.jpg' : '/assets/images/hero/banner.png'"
     alt="TKD Ailingen - Traditionelles Taekwon-Do"
     loading="eager"
     fetchpriority="high"

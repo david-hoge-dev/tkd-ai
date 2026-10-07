@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClubInfo } from '@shared/models';
 import { MaterialModule } from '@shared/material.module';
+import { ThemeService } from '@core/services/theme.service';
 
 /**
  * Hero section component displaying club name, tagline, and hero image
@@ -16,6 +17,9 @@ import { MaterialModule } from '@shared/material.module';
   styleUrl: './hero-section.scss',
 })
 export class HeroSection {
+  private readonly themeService = inject(ThemeService);
+  readonly currentTheme = this.themeService.getThemeSignal();
+
   @Input() clubInfo?: ClubInfo;
 
   /**

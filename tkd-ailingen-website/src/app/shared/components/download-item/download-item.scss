@@ -93,6 +93,9 @@
 @media (min-width: 768px) {
   .download-item {
     padding: 20px !important;
+    height: 100%;
+    margin-bottom: 0;
+    box-sizing: border-box;
 
     .download-title {
       font-size: 18px;
