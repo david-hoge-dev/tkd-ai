@@ -165,11 +165,11 @@ export class TrainersSection implements OnInit {
   private getSessionPriority(session: string): number {
     const sessionOrder: Record<string, number> = {
       'Bambinis 4-7 Anfänger': 1,
-      'Bambinis 4-7 Fortgeschritten': 2,
+      'Bambinis 4-7 Fortgeschrittene': 2,
       'Kinder 7-11 Anfänger': 3,
-      'Kinder 7-11 Fortgeschritten': 4,
+      'Kinder 7-11 Fortgeschrittene': 4,
       'Jugend 11-16 Anfänger': 5,
-      'Jugend 11-16 Fortgeschritten': 6,
+      'Jugend 11-16 Fortgeschrittene': 6,
       'Jugend ab 16 / Erwachsene': 7,
       'Erwachsene': 8,
       'Wettkampf': 9,

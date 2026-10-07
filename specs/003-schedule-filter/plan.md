@@ -179,7 +179,7 @@ No violations - all Constitution principles followed.
 
 4. **TrainingSession** (updated from homepage)
    - Add properties:
-     - `level`: `string` (e.g., "anfänger", "fortgeschritten")
+     - `level`: `string` (e.g., "anfänger", "fortgeschrittene")
      - `ageGroup`: `string` (e.g., "4-6", "7-10", "11-14", "erwachsene")
      - `levelAgeKey`: `string` (computed, e.g., "bambini-4-6" for filtering)
 

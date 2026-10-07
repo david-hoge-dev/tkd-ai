@@ -40,15 +40,15 @@ export const TRAINER_ROLE_LABELS: Record<string, string> = {
 };
 
 export const TRAINER_SPECIAL_ROLE_LABELS: Record<SpecialRole, string> = {
-  'youth-protection-officer': 'Jugendschutzbeauftragter',
+  'youth-protection-officer': 'Jugendschutzbeauftragte',
   'first-aid-certified': 'Erste-Hilfe zertifiziert',
   'competition-judge': 'Wettkampfrichter',
   treasurer: 'Kassenwart',
   'board-member': 'Vorstand',
   'vice-board-member': '2. Vorstand',
-  'trainer-c': 'Trainer-C Lizenz',
-  'trainer-b': 'Trainer-B Lizenz',
-  auditor: 'Prüfer Lizenz',
+  'trainer-c': 'Trainer C-Lizenz',
+  'trainer-b': 'Trainer B-Lizenz',
+  auditor: 'Prüferlizenz',
   'assistant-instructor': 'Assistenztrainer',
 };
 
